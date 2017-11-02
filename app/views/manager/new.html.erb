@@ -1,0 +1,29 @@
+<%= render 'welcome/home' %>
+<h1>Create a New Manager</h1>
+
+<%= form_tag :action => 'create' do %>
+<p><label for = "manager_name">Name:</label>
+<%= text_field 'managers', 'name' %></p>
+
+<p><label for = "manager_email">Email:</label>
+<%= text_field 'managers', 'email' %></p>
+
+<p><label for = "manager_password" style="background-color:#0087be;">Password:</label>
+<%= password_field 'managers', 'password' %>	
+
+<p><label for = "manager_confirm_password" style="background-color:#0087be;">Confirm Password:</label>
+<%= password_field 'managers', 'confirm_password' %></p>
+			
+
+
+<p><label for = "manager_department_id">Department:</label>
+<%= collection_select(:managers, :department_id, Department.all, :id, :name, prompt: true) %></p>
+
+
+<p><label for = "manager_description">Description:</label>
+<%= text_area 'managers', 'description' %></p>
+
+<%= submit_tag "Create" %>
+
+<% end %>
+<%= link_to 'Back', {:action => 'list'} %>

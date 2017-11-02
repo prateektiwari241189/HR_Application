@@ -1,0 +1,24 @@
+jQuery( document ).ready( function() {
+
+	//alert("works!");
+
+	jQuery( '<div id="gviews-wrapper"><div id="left"><i class="fa fa-eye"></i> Views</div><div id="right">' + scriptvars.views + '</div></div>' ).insertAfter( '.postcontent .mashsb-main' );
+
+	// var raw_scnt = jQuery( '.views' ).text();
+	// var int_scnt = parseInt( raw_scnt );
+
+	// var int_scnt = scriptvars.views;
+	
+	// var thecnt = ( int_scnt * 7 ) + 9;
+	
+	// if( int_scnt == 0 ) {
+
+	// 	jQuery( '.views' ).remove();
+
+	// }
+
+	// if( thecnt > 0 ) {
+	// 	jQuery( '<p class="views"><i class="fa fa-eye"></i> ' + thecnt + ' views</p>' ).insertBefore( '.tabpost .clear' );
+	// }
+
+});

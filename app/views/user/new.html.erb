@@ -1,0 +1,46 @@
+
+<h1 style="text-align:center;">Sign up for Admin User</h1>
+ <a><%= link_to 'Login', {:action => 'new', :controller => 'session'}, {:style => 'text-align:center !important;color:white;font-family:martel;font-size:15px;'} %></a>
+ <body>
+
+  <div class="form">
+      
+       <!--  <li class="tab active"><%#= link_to 'Back', {:action => 'list', :controller => 'user'} %></li> -->
+       
+      
+      
+      <div class="tab-content">
+        <div id="signup">   
+          <h2 style="background-color:#0087be;text-align:center;">Sign Up For Admin User</h2>
+		 <% if @user.errors.any? %>
+			<h2>Errors</h2>
+			<ul>
+			<% @user.errors.full_messages.each do |message|%>
+			<li><%= message %></li>
+		<% end %>  
+    </ul>
+  <% end %>
+          
+          <%= form_tag :action => 'create' do %>
+			<label for = "user_email" style="background-color:#0087be;">Enter Email Here</label>
+			<%= text_field 'users', 'email' %>
+
+			<label for = "user_password" style="background-color:#0087be;">Enter Password Here</label>
+			<%= password_field 'users', 'password' %>
+
+			<label for = "user_confirm_password" style="background-color:#0087be;">Confirm Password Here</label>
+		<%= password_field 'users', 'confirm_password' %>
+
+		<button type="submit" class="button button-block" style="background-color: white;"/><%= submit_tag "Create" , {:style=> "color:white; background-color:#0087be;font-size:15px;font-family:martel;cursor:pointer;"} %></button>
+
+		<% end %>  
+          
+          </form>
+
+        </div>
+        
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+
+</body>

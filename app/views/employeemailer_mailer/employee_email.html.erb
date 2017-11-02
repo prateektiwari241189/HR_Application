@@ -1,0 +1,26 @@
+<html>
+   
+   <head>
+      <meta content = 'text/html; charset = UTF-8' http-equiv = 'Content-Type' />
+   </head>
+   
+   <body>
+      <% byebug %>
+      <h1>New Skill has been added to employee <%= @employee.name %></h1>
+         <p>Now the current skill set of employee is:  </p>
+
+      <p>
+      <% @employee.skill.all.uniq.each do |s| %>
+         <p> <%= s[:name] %> </p>
+      <% end %>
+   </p>
+      <p>
+       And department is: 
+         <%= @employee.department.name %>.<br>
+      </p>
+      
+      
+      <p>Thanks and have a great day!</p>
+      
+   </body>
+</html>

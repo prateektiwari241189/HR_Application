@@ -1,0 +1,13 @@
+<div class="menu2">
+    <%= image_tag('logo.png') %>
+	<% @user = User.find_by(id: params[:format]) %>
+	<a><%#= link_to "Home" , {:action =>'home_view_session', :controller =>'session' }  %></a>
+	<a><%= link_to "Home" , session_home_url(@user) %> </a>
+    <a><%= link_to "News", news_news_url(@user)%></a>
+    <a class="current"><%= link_to "Tasks", tasks_tasks_url(@user)%></a>
+    <a><%= link_to "Records",records_records_url(@user)%></a>
+    <a href="#4"><%= link_to "Reports", reports_reports_url(@user)%></a>
+    <a href="#5"><%= link_to "Actions", actions_actions_url(@user)%></a>
+    <a class="dummy"> </a>
+	<a><%= link_to "Logout", {:action => 'new', :controller => 'session' } ,{:style => "padding-left:95%"}%></a>
+</div>

@@ -1,0 +1,15 @@
+
+<h1>Employee Details</h1>
+
+<p>
+   <strong>Name: </strong> <%= @employee.name %><br />
+   <strong>image: </strong> <%= image_tag @employee.image_url.to_s  ,{:style => "width:30px;"} %><br />
+   <strong>Department :</strong> <%= @employee.department.name %><br />
+   <strong>Created Date:</strong> <%= @employee.created_at %><br />
+</p>
+
+<p><%= @employee.description %></p>
+
+<hr />
+
+<%= link_to 'Back', {:action => 'list'} %>

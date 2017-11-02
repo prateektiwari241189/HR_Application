@@ -1,0 +1,30 @@
+<%= render 'welcome/home' %>
+<h1>Create a New Employee</h1>
+<% byebug %>
+<%= form_tag({:action => :create}, :multipart => true) do %>
+<p><label for = "employee_name">Name:</label>
+<%= text_field 'employees', 'name' %></p>
+
+<p><label for = "employee_email">Email:</label>
+<%= text_field 'employees', 'email' %></p>
+
+<p><label for = "employee_image">Employee Image:</label>
+<%= file_field 'employees', 'image' %></p>
+
+<p><label for = "employee_department_id">Department:</label>
+<%= collection_select(:employees, :department_id, Department.all, :id, :name, {:multiple => true}, prompt: true) %></p>
+
+<%= fields_for(Empskill.all) do |ab| %>
+<p>
+	<%= ab.label "Skills:" %>
+<%= collection_select(:skills, :skill_id, Skill.all, :id, :name,{}, {:multiple => true}) %></p>
+<% end %>
+
+
+<p><label for = "employee_description">Description:</label>
+<%= text_area 'employees', 'description' %></p>
+
+<%= submit_tag "Create" %>
+
+<% end -%>
+<%= link_to 'Back', {:action => 'list', :format => @user} %>

@@ -1,0 +1,40 @@
+<%= render 'welcome/home' %>
+<% byebug %>
+
+<% if Employee.all.blank? %>
+<p>There are not any employees currently in the system.</p>
+<% else %>
+<p>These are the current employees in our system</p>
+
+<table id = "books" style= "border: 1px solid white">
+<tr style= "border: 1px solid white">
+<td style= "border: 1px solid white">Username</td>
+<td style= "border: 1px solid white"></td>
+<td style= "border: 1px solid white">Department</td>
+<td style= "border: 1px solid white"></td>
+<td style= "border: 1px solid white">Current Skills Of This Employees</td>
+<td style= "border: 1px solid white">Employee Image</td>
+</tr>
+   <% Employee.all.uniq.each do |c| %>
+   <tr>
+   <td style= "border: 1px solid white"><%= link_to c.name, {:action => 'show', :id => c.id} -%></td>
+   <td style= "border: 1px solid white"></td>
+   <td style= "border: 1px solid white"><%= link_to c.department.name , {:action => 'show', :id => c.id}  %></td>
+   <td style= "border: 1px solid white"></td>
+   <td style= "border: 1px solid white" >
+   <% c.skill.uniq.each do |s| %>
+   <br/><%= s.name %>
+   <% end %> 
+
+   </td>
+   <td style= "border: 1px solid white"><%= image_tag c.image_url.to_s  ,{:style => "width:90px; height:70px;float:right"} %></td>
+   <td style= "border: 1px solid white"> <%= link_to 'Edit',edit_employee_url(:id => c.id, :format => @user) , {:action => "edit",
+   :id => c.id} %></td>
+   
+   <td style= "border: 1px solid white"><%= link_to 'Linkedin', linkedin_index_url(:id => c.id, :format => @user) %><td>
+   <% end %>
+</tr>
+</table>
+
+<% end %>
+<p><%= link_to "Create a New Employee", {:action => 'employees', :controller => 'employees' , :format => @user}%></p>

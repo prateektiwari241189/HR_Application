@@ -1,0 +1,10 @@
+<%= render 'welcome/home' %>
+<% byebug %>
+<% @user = User.find_by(id: params[:format]) %>
+<h1> Records </h1>
+<% if ! @user.blank?  %>
+<a style="color:white;"><%= link_to "Directory Of Admin Users", user_list_url(@user) , {:style => 'color:white'}%></a>
+<% end %>
+<br/>
+<p><a style="color:white;"><%= link_to "Directory Of Employees In Organization", employees_list_url(@user) , {:style => 'color:white'}%></a><p>
+

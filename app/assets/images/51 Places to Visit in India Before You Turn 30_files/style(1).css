@@ -1,0 +1,541 @@
+/*-----------------------------------------------------------------------------------
+
+	Theme Name: Edition-Child
+	Theme URI: http://themewich.com
+	Description: A highly interactive news theme.
+	Author: Andre Gagnon
+	Author URI: http://www.themewich.com
+	Template: edition
+	Version: 1.0.0
+	License: GNU General Public License version 3.0
+	License URI: http://www.gnu.org/licenses/gpl-3.0.html
+	Version: 1.7.4
+	Text Domain:  edition-child
+
+	All files, unless otherwise stated, are released under the GNU General Public License
+	version 3.0 (http://www.gnu.org/licenses/gpl-3.0.html)
+
+	-----------------------------------------------------------------------------------*/
+
+/*
+ ************* SPONSOR DETAILS SECTION ********************
+ */
+.sponsor_details {
+	color: #000;
+	padding: 0;
+	margin-bottom: 45px;
+	clear: both;
+	z-index: 130;
+	position: relative;
+	margin-top:-45px;
+}
+
+.sponsor_details img.aligncenter, .sponsor_details .wp-caption.aligncenter {
+	margin: 0 auto;
+}
+
+.banner-ad.container {
+	text-align: center;
+	padding: 20px 0;
+	margin-bottom: 45px;
+}
+
+.banner-ad.container .widget{
+	margin-bottom: 0;
+}
+/*
+# Logo
+*/
+#logo{
+	padding: 0 30px 0 0 !important;
+}
+
+#logo h1, #logo h2 {
+	margin: 0;
+}
+
+#logo, .top-ad, .regular-nav #menu, .regular-nav .searchnav {
+	padding-top: 0 !important;
+	padding-bottom: 0 !important;
+}
+
+.search input[type="search"], .search input[type="text"] {
+	color:#fff;
+	background: rgba(0,0,0,0.75);
+}
+/*
+ ************* HEADER HERO IMAGE SECTION ********************
+ */
+.home .content-section .container .col-md-12 {
+	text-align: center;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	padding:60px;
+	text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.5);
+}
+
+.home .content-section {
+	background-image: url(images/Thrillophilia-Cover-Image.jpg);
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.home .content-section .container .col-md-12 h1,
+.home .content-section .container .col-md-12 p {
+	color: #fff;
+}
+
+.home .content-section .container .col-md-12 p {
+	margin-bottom: 10px;
+}
+
+.home .content-section .container .col-md-12 .search-form{
+	max-width:800px;
+	min-width:480px;
+}
+.home .content-section .container .col-md-12 div.search-form {
+	margin-bottom: 30px;
+	height: 48px;
+}
+
+.home .content-section .container .col-md-12 div.search-form i.searchbutton{
+	line-height:48px;
+}
+
+.home .content-section a.tw-button.shortcode {
+	color: #fff;
+	margin-right: 15px;
+}
+
+.home .content-section a.tw-button.shortcode:hover {
+	background-color: #fff;
+	text-decoration: underline;
+}
+
+.home .content-section .container .col-md-12 .search-field{
+	background: rgba(255, 255, 255, 0.8);
+	border-radius: 2px;
+	height: 48px;
+	font-size: 16px;
+	padding-left: 40px;
+	max-width: 100%;
+}
+.home .content-section .tw-button,
+.home .content-section a.tw-button {
+	border-color: #fff;
+}
+
+.home .content-section .tw-button:hover,
+.home .content-section a.tw-button:hover {
+	background-color: #fff !important;
+	color: #111 !important;
+	text-shadow: none;
+}
+
+.home .content-section .tw-social-icon {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+.home .content-section.section.first-section, .home .content-section.section.no-top-margin.no-title.first-section{
+	margin-top: 0;
+}
+
+/*
+ ************* BADGE STYLING ON SINGLE POST ********************
+ */
+.badge {
+	background-color: transparent;
+}
+
+
+/*
+ *  INFINITE RELATED POST SCROLL
+ */
+
+.thrillo-related-posts .related-posts .grid-item .title a {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	line-height: 25px;
+	max-height: 90px;
+	font-size: 25px !important
+}
+
+.thrillo-related-posts .related-posts .grid-item {
+	width: 33%;
+}
+.thrillo-related-posts .related-posts .grid-item:first-child,
+.thrillo-related-posts .related-posts .grid-item:nth-child(5n+1) {
+	width: 66%;
+}
+
+/* Text meant only for screen readers. */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+
+/*
+ ************* POPULAR POST WIDGET SECTION ********************
+ */
+
+.widget .grid-item .isobrick-inner {
+	margin-bottom: 10px;
+}
+
+/*
+# before after slider
+*/
+#sitecontainer .ba-slider img{
+	max-width:none !important;
+}
+
+.ba-slider .handle.draggable:after {
+	width: 48px;
+	height: 48px;
+	margin: -24px 0 0 -24px;
+	line-height: 44px;
+	font-size: 30px;
+}
+
+.ba-slider .handle:after{
+	top: 50%;
+	width: 60px;
+	height: 60px;
+	margin: -30px 0 0 -30px;
+	content: '\2194';
+	font-size: 36px;
+	line-height: 56px;
+	background: none;
+	border: 2px solid #fff;
+	transition: all .3s ease;
+	box-shadow: none;
+}
+
+/*
+# topbar
+*/
+.topbar-right {
+	padding-right: 0;
+}
+
+/*
+ ************* RELATED POST WIDGET SECTION ********************
+ */
+
+.edition_related_posts_widget  .tab-title a {
+	color: #777;
+}
+
+/*
+ ************* SECTIONS STYLES *******************
+ */
+.section-title span {
+	display: block;
+	text-align: center;
+	margin-bottom: 20px;
+	font-weight: 600;
+	font-size: 40px;
+}
+.section-title .vertical-div {
+	display: none;
+}
+.section-title p {
+	display: block;
+	text-align: center;
+	margin-bottom: 40px;
+	margin-top: 20px;
+	font-size: 22px;
+	font-weight: 300;
+}
+/*
+ ************* INJECTED WIDGET AREA STYLES *******************
+ */
+.ya-wai .edition_popular_widget .grid-item {
+	width: 33%;
+}
+
+.ya-wai .edition_popular_widget .grid-item:first-child,
+.ya-wai .edition_popular_widget .grid-item::nth-child(5n+1) {
+	width: 66%;
+}
+
+.ya-wai .edition_popular_widget .grid-item {
+	/* width: 49.69%; */
+	height: 326px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	background: #222;
+}
+
+.ya-wai .edition_popular_widget .thumbovertext .title {
+	font-size: 17px;
+}
+
+.ya-wai .edition_popular_widget ul > li::before {
+	content: '' !important;
+	background-color: transparent !important;
+}
+
+.ya-wai .textwidget {
+	text-align: center;
+}
+
+.ya-wai .widget{
+	margin: 1.5em auto;
+}
+
+.ya-wai .widgettitle {
+	text-align: center;
+	font-size: 27px;
+	text-transform: uppercase;
+}
+
+/*
+ ************* RELATED POSTS STYLE FOR RELATED POST WIDGET FOR YA-WAI *******************
+ */
+
+.ya-wai .edition_wai_related_posts_widget .section-title{
+	display: none;
+}
+
+.ya-wai .edition_wai_related_posts_widget .related-posts .grid-item .title a {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	line-height: 17px;
+	max-height: 120px;
+	font-size: 17px !important
+}
+
+.ya-wai .edition_wai_related_posts_widget .related-posts .grid-item {
+	width: 33%;
+}
+
+.ya-wai .edition_wai_related_posts_widget .related-posts .grid-item .thumboverdate {
+	padding: 20px 30px;
+}
+
+.ya-wai .edition_wai_related_posts_widget .related-posts .grid-item .thumbovertext {
+	padding: 10px 30px;
+	max-width: 100%;
+}
+
+.ya-wai .edition_wai_related_posts_widget .related-posts .grid-item {
+	height: 256px;
+}
+
+@media screen and (max-width: 800px) {
+	.ya-wai .edition_wai_related_posts_widget .related-posts .grid-item,
+	.thrillo-related-posts .related-posts .grid-item,
+	.thrillo-related-posts .related-posts .grid-item:first-child,
+	.thrillo-related-posts .related-posts .grid-item:nth-child(5n+1) {
+		width: 100%;
+	}
+}
+
+/*
+ ************* GRID SECTION STYLE *******************
+ */
+.section-title p {
+	padding-right: 0px;
+}
+
+.section.grid.grid-full .grid-item.halfgrid .thumbovertext .title a {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 3;
+	line-height: 1.1;
+	max-height: 120px;
+}
+
+/*
+Colour overrides
+*/
+
+.top-bar {
+	background: #303740;
+}
+
+/*
+ ************* GRID TAGS STYLE *******************
+ */
+
+.grid_tags {
+	margin-top: 1em;
+	margin-bottom: 2em;
+	text-align: center;
+}
+
+.grid_tags a.tw-button.shortcode {
+	border-color: #777;
+	color: #777;
+	margin-right: 15px;
+}
+
+/*
+ ************* MENU STYLE *******************
+ */
+
+.sf-menu > li.sfHover > a, .sf-menu li > a:hover {
+	background: #303740;
+	color: #fff;
+}
+
+/*
+ ************* MOBILE SITE STYLE *******************
+ */
+
+@media screen and (max-width: 800px) {
+
+	.home .content-section .container .col-md-12 .search-field {
+		width: 300px;
+	}
+	.section-title span {
+		line-height: 0.9;
+	}
+	.ya-wai .edition_wai_related_posts_widget .related-posts .grid-item,
+	.thrillo-related-posts .related-posts .grid-item,
+	.thrillo-related-posts .related-posts .grid-item:first-child,
+	.thrillo-related-posts .related-posts .grid-item:nth-child(5n+1) {
+		width: 100%;
+	}
+	.section-title p {
+		line-height: 22px;
+	}
+	.section-title p {
+		padding-right: 20px;
+	}
+}
+
+@media only screen and (max-width: 479px) {
+	.section-title p {
+		padding-right: 80px;
+	}
+	.section-title span, .section-title p {
+		text-align: left;
+	}
+}
+
+/*
+ ************* EDITION POPULAR POST STYLE FOR POST WITHOUT THUMBNAILS *******************
+ */
+
+
+.edition_popular_widget .grid-item{
+	height: 326px;
+	width: 100%;
+	height: 326px;
+	margin-right: 2px;
+	margin-bottom: 2px;
+	background: #222;
+}
+
+/*
+ ************* FOOTER AREA *******************
+ */
+ #footer {
+ 	background-color: #303740;
+}
+
+#footer #footer-logo {
+	display: inline-block;
+	vertical-align: middle;
+	width: 100%;
+	margin-bottom: 10px;
+}
+
+.footer-one-third{
+	background-color: #303740;
+}
+.footer-full{
+	background: #272d35;
+	text-align: center;
+	color: rgba(255,255,255,0.7);
+	font-size: 14px;
+	padding: 10px 10px;
+}
+
+#footer .widget a{
+	color: rgba(255,255,255,0.7);
+}
+
+.footer-full .tw-social-icon {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+	background-color: #fff;
+}
+
+.footer-full .widget {
+	margin-bottom: 10px;
+}
+
+.footer-full .widget , .footer-full .widget a{
+	font-size: 14px;
+}
+
+#footer-supplier-link :hover{
+	background: #333;
+	color: #fff;
+}
+/*
+ ************* ORDERED LIST COUNTERS *******************
+ */
+.generatedcontent {
+	counter-reset: themewich-counter;
+}
+.generatedcontent .content ol, .generatedcontent .content span ol {
+	counter-reset: none !important;
+}
+
+
+.sidebar .edition_popular_widget .grid-item .thumbovertext .title a {	
+	max-height: 170px;
+}
+
+/* Google Counter CSS */
+
+div#gviews-wrapper #right {
+    background-color: #eee;
+    padding: 1px 5px;
+}
+
+div#gviews-wrapper #left {
+    background-color: #ffbf41;
+    padding: 1px 7px;
+    border-radius: 5px 0px 0px 5px;
+}
+
+div#gviews-wrapper div {
+    float: left;
+}
+
+div#gviews-wrapper {
+    display: inline-block;
+    margin-right: 20px;
+    position: relative;
+    top: 3px;
+    border-radius: 3px 0px 0px 3px;
+    font-size: 13px;
+    box-shadow: 2px 3px 1px #777;
+}
+
+.tabswrap p.views {
+    color: #f36f21 !important;
+}

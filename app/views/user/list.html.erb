@@ -1,0 +1,25 @@
+<%= render 'welcome/home' %>
+<% if User.all.blank? %>
+<p>There are not any users currently in the system.</p>
+<% else %>
+<p>These are the current users in our system</p>
+
+<table id = "books" style= "border: 1px solid white">
+<tr style= "border: 1px solid white">
+<td style= "border: 1px solid white">User Number</td>
+<td style= "border: 1px solid white"></td>
+<td style= "border: 1px solid white">Email</td>
+</tr>
+<tr style= "border: 1px solid white">
+
+   <% User.all.uniq.each do |c| %>
+</tr>
+<tr style= "border: 1px solid white">
+	<td style= "border: 1px solid white"><%= c.id %><td>
+    <td style= "border: 1px solid white"><%= link_to c.email, {:action => 'show', :id => c.id} -%></td>
+   
+   <% end %>
+</tr>
+
+<% end %>
+<p><%= link_to "Add new user", {:action => 'new' }%></p>

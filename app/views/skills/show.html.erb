@@ -1,0 +1,14 @@
+<%#= render 'welcome/home' %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @skill.name %>
+</p>
+<p><strong>Employees:</strong>
+  <ol>
+  <% @skill_employee.each do |ba| %>
+     <li><%= ba.employee.name %></li>
+  <% end %>
+  </ol>
+</p>

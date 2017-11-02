@@ -1,0 +1,36 @@
+
+<%= image_tag('logo.png') %>
+<h1 style="text-align:center;">HR Application</h1>
+
+	<body>
+  <div class="form">
+      
+      <ul class="tab-group">
+        <!-- <li class="tab active"><%= link_to 'New User Sign Up', {:action => 'new', :controller => 'user'} %></li> -->
+      </ul>
+        
+        <div id="login">  
+		
+          <h2 style="background-color: #0087be;text-align:center;">Login In Here</h2>
+	
+	<%= form_for(:session, url: login_path) do |f| %>
+
+      <%=  f.label :email, 'Enter Email Here' , {:style=> "background-color: #0087be;"}%>
+      <%= f.email_field :email, class: 'form-control' %>
+		
+      <%=  f.label :password, 'Enter Password Here' , {:style=> "background-color: #0087be;"}%>
+      <%= f.password_field :password, class: 'form-control' %>
+		
+     <button class="button button-block" style="background-color: white;"/> <%= f.submit "Log in", {:style=> "color:white; background-color:#0087be;font-size:15px;font-family:martel;cursor:pointer;", :class=> "btn btn-primary"} %></button>
+	 <% end %>
+	 
+	 <%#= flash[:notice]%>
+        </div>
+        <p style="color: red;"><%= flash[:notice] %></p>
+      </div><!-- tab-content -->
+      
+</div> <!-- /form -->
+
+</body>
+	
+	

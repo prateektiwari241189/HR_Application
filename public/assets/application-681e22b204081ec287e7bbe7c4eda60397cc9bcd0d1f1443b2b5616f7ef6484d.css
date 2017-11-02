@@ -1,0 +1,211 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:300);
+@import url(https://fonts.googleapis.com/css?family=Martel);
+/* line 8, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.login-page {
+  width: 360px;
+  padding: 8% 0 0;
+  margin: auto;
+}
+
+/* line 13, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* line 23, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.form input {
+  font-family: "Roboto", sans-serif;
+  outline: 0;
+  background: #E5E5E5;
+  width: 100%;
+  border: 0;
+  margin: 0 0 15px;
+  padding: 15px;
+  box-sizing: border-box;
+  font-size: 14px;
+}
+
+/* line 34, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.form button {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  width: 100%;
+  border: 0;
+  padding: 0px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+/* line 50, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.form .message {
+  margin: 15px 0 0;
+  color: #b3b3b3;
+  font-size: 12px;
+}
+
+/* line 55, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.form .message a {
+  color: #4CAF50;
+  text-decoration: none;
+}
+
+/* line 59, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.form .register-form {
+  display: none;
+}
+
+/* line 62, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.container {
+  position: relative;
+  z-index: 1;
+  max-width: 300px;
+  margin: 0 auto;
+}
+
+/* line 68, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.container:before, .container:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/* line 73, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.container .info {
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* line 77, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.container .info h1 {
+  margin: 0 0 15px;
+  padding: 0;
+  font-size: 36px;
+  font-weight: 300;
+  color: #1a1a1a;
+}
+
+/* line 84, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.container .info span {
+  color: #4d4d4d;
+  font-size: 12px;
+}
+
+/* line 88, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.container .info span a {
+  color: #000000;
+  text-decoration: none;
+}
+
+/* line 92, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+.container .info span .fa {
+  color: #EF3B3A;
+}
+
+/* line 95, C:/Sites/HR_Application/app/assets/stylesheets/welcome.scss */
+body {
+  /* fallback for old browsers */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center !important;
+  color: white;
+  background-color: #0087be;
+  font-family: 'Martel';
+}
+
+div.menu2
+{
+    /*width:500px;margin:0 auto;*//*Uncomment this line to make the menu center-aligned.*/
+    text-align:center;
+    background-image: url(bg1.gif);
+    border:1px solid white;
+    font-size:0;
+}
+
+div.menu2 a
+{
+    display: inline-block;
+    padding: 0 20px;
+    background-image: url(bg.gif);
+    color:White;
+    text-decoration:none;
+    font: bold 16px martel;
+    line-height: 32px;
+}
+
+div.menu2 a:hover, div.menu2 a.current
+{
+    background-position:0 -60px;
+}
+
+div.menu2 a.dummy
+{
+    width:2px;
+    padding:0 0;
+}
+/* line 9, C:/Sites/HR_Application/app/assets/stylesheets/user.scss */
+body {
+  /* fallback for old browsers */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center !important;
+  color: white;
+  background-color: #0087be;
+  font-family: 'Martel';
+}
+/* line 7, C:/Sites/HR_Application/app/assets/stylesheets/manager.scss */
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: left;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+
+/* line 18, C:/Sites/HR_Application/app/assets/stylesheets/manager.scss */
+body {
+  /* fallback for old browsers */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: left !important;
+  color: white;
+  background-color: #0087be;
+  font-family: 'Martel';
+}
+
+/* line 29, C:/Sites/HR_Application/app/assets/stylesheets/manager.scss */
+label {
+  display: block;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *require_all
+
+
+
+
+ */
+

@@ -1,0 +1,7 @@
+<%#= render 'welcome/home' %>
+<h1>Add New Skill in the Organization</h1>
+<% byebug %>
+<% @user = User.find_by(id: params[:format]) %>
+<%= render 'form' %>
+
+<%= link_to 'Back', {:action => 'home_view_session', :controller => 'session', :format => @user} %>

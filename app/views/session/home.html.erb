@@ -1,0 +1,30 @@
+<div class="menu2">
+    <%= image_tag('logo.png') %>
+	<% @user = User.find_by(id: params[:format]) %>
+    <% session[:user] = @user %>
+	<% byebug %>
+	<a><%= link_to "Home" , session_home_url(@user)  %></a>
+	<a><%#= link_to "Profile" , session_home_url(@user) %> </a>
+    <a><%= link_to "News",  news_news_url(@user) %></a>
+    <a class="current"><%= link_to "Tasks", tasks_tasks_url(@user) %></a>
+    <a><%= link_to "Records",  records_records_url(@user) %></a>
+    <a href="#4"><%= link_to "Reports", reports_reports_url(@user) %></a>
+    <a href="#5"><%= link_to "Actions",  actions_actions_url(@user) %></a>
+    <a class="dummy"> </a>
+	<a><%= link_to "Logout", {:action => 'new', :controller => 'session' } ,{:style => "padding-left:95%"}%></a>
+</div>
+<br/>
+<% if ! @user.blank?  %>
+<a style="color:white;"><%= link_to 'Click here to sign up as Admin User', {:action => 'new', :controller => 'user', :format =>@user} ,{:style => "color: white;"} %></a>
+<br/>
+<br/>
+<a><%= link_to 'Click here to sign up as Manager', {:action => 'new', :controller => 'manager', :format => @user} ,{:style => "color: white;"}%></a>
+<br/>
+<br/>
+<a><%= link_to 'Click here to sign up as HR', {:action => 'new', :controller => 'hr', :format => @user} ,{:style => "color: white;"}%></a>
+<br/>
+<br/>
+<a><%= link_to 'Click here to create a New Skill', {:action => 'new', :controller => 'skills', :format => @user} ,{:style => "color: white;"}%></a>
+<% else %>
+<a>Manager</a>
+<% end %>
