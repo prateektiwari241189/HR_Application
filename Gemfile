@@ -8,7 +8,8 @@ end
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.0.1'
-
+gem 'will_paginate', '~> 3.1.0'
+# used for the pagination
 # Use sqlite3 as the database for Active Record
 gem 'pg'
 gem 'linkedin'
@@ -16,7 +17,7 @@ gem 'auto-session-timeout'
 gem 'devise'
 gem 'carrierwave', '~> 0.10.0'
 gem 'mini_magick', '3.5', :require => 'mini_gmagick'
-gem 'fog'
+# gem 'fog'
 # gem 'mini_magick', '~> 4.5', '>= 4.5.1'
 gem 'fog'
 gem 'figaro'
