@@ -1,8 +1,9 @@
 class EmployeesController < ApplicationController
+  require 'will_paginate/array' 
    before_action :set_employee, only: [:show, :edit]
 
    def index
-    @employees = Employee.all
+    @employees = Employee.all.paginate(:page =>params[:page], :per_page => 10)
   end
 
 	# def list
@@ -49,6 +50,8 @@ class EmployeesController < ApplicationController
       end
     end
    end
+
+   
 
     def update
       byebug
