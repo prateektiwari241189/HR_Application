@@ -1,0 +1,23 @@
+
+<%# @employees = Employee.all.paginate(:page =>params[:page], :per_page => 10) %>
+ 
+  <tr>
+      <td style= "border: 1px solid white"><%= link_to employee.name, {:action => 'show', :id => employee.id} -%></td>
+      <td style= "border: 1px solid white"></td>
+      <td style= "border: 1px solid white"><%= link_to employee.department.name , {:action => 'show', :id => employee.id}  %></td>
+      <td style= "border: 1px solid white"></td>
+      <td style= "border: 1px solid white" >
+      <% employee.skill.uniq.each do |s| %>
+         <br/><%= s.name %>
+      <% end %> 
+
+      </td>
+      <td style= "border: 1px solid white"><%= image_tag employee.image_url.to_s  ,{:style => "width:90px; height:70px;float:right"} %></td>
+      <td style= "border: 1px solid white"> <%= link_to 'Edit',edit_employee_url(:id => employee.id, :format => @user) , {:action => "edit",
+      :id => employee.id} %></td>
+   
+      <td style= "border: 1px solid white"><%= link_to 'Linkedin', linkedin_index_url(:id => employee.id, :format => @user) %><td>
+   
+   </tr>
+
+

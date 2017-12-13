@@ -1,6 +1,6 @@
-
+<%= render 'welcome/home' %>
 <h1>Employee Details</h1>
-
+<% cache @employee do %>
 <p>
    <strong>Name: </strong> <%= @employee.name %><br />
    <strong>image: </strong> <%= image_tag @employee.image_url.to_s  ,{:style => "width:30px;"} %><br />
@@ -9,7 +9,8 @@
 </p>
 
 <p><%= @employee.description %></p>
-
+<% end %>
 <hr />
-
+<% if ! @user.blank?  %>
 <%= link_to 'Back', {:action => 'list'} %>
+<% end %>

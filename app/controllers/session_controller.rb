@@ -6,9 +6,11 @@ class SessionController < ApplicationController
 	end
 
   def create
+  	byebug
     user = User.find_by(email: params[:session][:email])
-    session[:user_id] = user.id
-    cookies[:user_name] = "priyam I love u"
+    employee = Employee.find_by(email: params[:session][:email])
+    # session[:user_id] = user.id
+    # cookies[:user_name] = "priyam I love u"
     manager = Manager.find_by(email: params[:session][:email])
 	if ! user.nil? 
 		begin
@@ -23,8 +25,18 @@ class SessionController < ApplicationController
 			flash[:notice] = "password doesn't match or fields are empty".html_safe
 			render :action => :new, :controller => session
 		end
-	elsif manager.password == params[:session][:password]
-		render 'welcome/home'
+	elsif ! manager.nil?
+		if manager.password == params[:session][:password]
+			render 'welcome/home'
+		else
+			render 'user/new'
+		end
+	elsif ! employee.nil?
+		if employee.email == params[:session][:email]
+			render 'employees/single_empdetail'	
+		else 
+			render 'user/new'
+		end
 	else
 		flash[:notice] = "Email and password are empty"
 		render :action => :new, :controller => session

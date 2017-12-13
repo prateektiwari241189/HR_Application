@@ -2,12 +2,14 @@ class EmployeesController < ApplicationController
   require 'will_paginate/array' 
    before_action :set_employee, only: [:show, :edit]
 
-   def index
-    @employees = Employee.all.paginate(:page =>params[:page], :per_page => 10)
+  
+
+   def list
+    @employees = Employee.paginate(:page =>params[:page], :per_page => 10).order('created_at DESC')
   end
 
 	# def list
- #      @employees = Employee.all
+ #      @employees = Employee.order('name').page(params[:page]).per_page(10)
 	# end
 
    def show

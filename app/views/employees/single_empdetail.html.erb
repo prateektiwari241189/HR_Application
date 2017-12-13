@@ -1,0 +1,33 @@
+<%= render 'welcome/home' %>
+<% employee = Employee.find_by(email: params[:session][:email]) %>
+<% byebug %>
+<table id = "books" style= "border: 1px solid white">
+<tr style= "border: 1px solid white">
+<th style= "border: 1px solid white">Username</th>
+<th style= "border: 1px solid white"></th>
+<th style= "border: 1px solid white">Department</th>
+<th style= "border: 1px solid white"></th>
+<th style= "border: 1px solid white">Current Skills Of This Employees</th>
+<th style= "border: 1px solid white">Employee Image</th>
+</tr>
+<tr>
+      <td style= "border: 1px solid white"><%= link_to employee.name -%></td>
+      <td style= "border: 1px solid white"></td>
+      <td style= "border: 1px solid white"><%= link_to employee.department.name  %></td>
+      <td style= "border: 1px solid white"></td>
+      <td style= "border: 1px solid white" >
+      <% employee.skill.uniq.each do |s| %>
+         <br/><%= s.name %>
+      <% end %> 
+
+      </td>
+      <td style= "border: 1px solid white"><%= image_tag employee.image_url.to_s  ,{:style => "width:90px; height:70px;float:right"} %></td>
+      <td style= "border: 1px solid white"> <%= link_to 'Edit',edit_employee_url(:id => employee.id, :format => @user) , {:action => "edit",
+      :id => employee.id} %></td>
+   
+      <td style= "border: 1px solid white"><%= link_to 'Linkedin', linkedin_index_url(:id => employee.id, :format => @user) %><td>
+   
+   </tr>
+
+
+</table>

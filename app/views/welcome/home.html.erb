@@ -24,7 +24,9 @@
 <br/>
 <br/>
 <a><%= link_to 'Click here to create a New Skill', {:action => 'new', :controller => 'skills', :format => @user} ,{:style => "color: white;"}%></a>
+<% elsif %>
+<a>Manager or Employee</a>
 <% else %>
-<a>Manager</a>
+<a> Employee </a>
 <% end %>
 

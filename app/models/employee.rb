@@ -8,5 +8,6 @@ class Employee < ApplicationRecord
 	VALID_EMAIL_REGEX = /\A[\w+\-.]+@[a-z\d\-.]+\.[a-z]+\z/i
 	validates :email, length: { maximum: 255 }, format: { with: VALID_EMAIL_REGEX }, uniqueness: true
     mount_uploader :image, ImageUploader
+    self.per_page = 10
 
 end

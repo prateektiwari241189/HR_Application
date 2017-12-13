@@ -23,5 +23,6 @@
 <%= f.text_area 'description' %></p>
 <%= f.submit "Save changes" %>
 <% end %>
-
+<% if ! @user.blank?  %>
 <%= link_to 'Back', {:action => 'list', :format => @user } %>
+<% end %>
