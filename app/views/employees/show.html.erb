@@ -11,6 +11,6 @@
 <p><%= @employee.description %></p>
 <% end %>
 <hr />
-<% if ! @user.blank?  %>
+<% if ! session[:user_id].blank?  %>
 <%= link_to 'Back', {:action => 'list'} %>
 <% end %>

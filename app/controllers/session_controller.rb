@@ -6,15 +6,15 @@ class SessionController < ApplicationController
 	end
 
   def create
-  	byebug
     user = User.find_by(email: params[:session][:email])
     employee = Employee.find_by(email: params[:session][:email])
+    if ! user.blank?
+    	session[:user_id] = user.id
+    end
     # session[:user_id] = user.id
-    # cookies[:user_name] = "priyam I love u"
     manager = Manager.find_by(email: params[:session][:email])
 	if ! user.nil? 
 		begin
-			byebug
 			if user.password == params[:session][:password]
 				render 'welcome/home' 	
 			else
@@ -51,7 +51,6 @@ class SessionController < ApplicationController
 
 
   def timeout
-  	byebug
   	flash[:notice] = "Your session has been timed out"
   	rediect_to "/user/new"
   end
@@ -59,7 +58,6 @@ class SessionController < ApplicationController
   
 
   def home_view_session
-  	byebug
   	render 'session/home'
 
   end

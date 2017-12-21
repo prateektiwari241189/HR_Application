@@ -11,9 +11,9 @@
 <th style= "border: 1px solid white">Employee Image</th>
 </tr>
 <tr>
-      <td style= "border: 1px solid white"><%= link_to employee.name -%></td>
+      <td style= "border: 1px solid white"><%= employee.name -%></td>
       <td style= "border: 1px solid white"></td>
-      <td style= "border: 1px solid white"><%= link_to employee.department.name  %></td>
+      <td style= "border: 1px solid white"><%= employee.department.name  %></td>
       <td style= "border: 1px solid white"></td>
       <td style= "border: 1px solid white" >
       <% employee.skill.uniq.each do |s| %>

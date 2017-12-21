@@ -1,6 +1,9 @@
 <div class="menu2">
     <%= image_tag('logo.png') %>
 	<% @user = User.find_by(email: params[:session][:email]) %>
+    <% if ! @user.blank? %>
+        <% session[:user] = @user %>
+    <% end %>
 	<a><%#= link_to "Home" , {:action =>'home_view_session', :controller =>'session'}  %></a>
 	<% byebug %>
 	<a><%= link_to "Home" , session_home_url(@user) %> </a>

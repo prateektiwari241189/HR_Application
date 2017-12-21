@@ -47,6 +47,7 @@ class EmployeesController < ApplicationController
         format.html { redirect_to @employee, :format => @user }
         format.json { render :show, status: :created, location: @employee, :format => @user }
       else
+        flash[:notice] = "Mandatory fields are empty"
         format.html { render :employees }
         format.json { render json: @employee.errors, status: :unprocessable_entity }
       end

@@ -14,7 +14,7 @@
 	<a><%= link_to "Logout", {:action => 'new', :controller => 'session' } ,{:style => "padding-left:95%"}%></a>
 </div>
 <br/>
-<% if ! @user.blank?  %>
+<% if ! session[:user_id].blank?  %>
 <a style="color:white;"><%= link_to 'Click here to sign up as Admin User', {:action => 'new', :controller => 'user', :format =>@user} ,{:style => "color: white;"} %></a>
 <br/>
 <br/>
